@@ -34,9 +34,9 @@ https://templatemo.com/tm-539-simple-house
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
-								<li class="tm-nav-li"><a href="/welcome" class="tm-nav-link active">Home</a></li>
-								<li class="tm-nav-li"><a href="/about" class="tm-nav-link">About</a></li>
-								<li class="tm-nav-li"><a href="/contact" class="tm-nav-link">Contact</a></li>
+								<li class="tm-nav-li"><a href="{{Route('welcome')}}" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="{{Route('about')}}" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="{{Route('contact')}}" class="tm-nav-link">Contact</a></li>
 							</ul>
 						</nav>	
 					</div>

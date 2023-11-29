@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Route;
 
 class customcontroller extends Controller
 {
@@ -16,3 +17,5 @@ class customcontroller extends Controller
         return view('contact');
     }
 }
+
+
