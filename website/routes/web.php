@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\customcontroller;
 //single action controller
 use App\Http\Controllers\singleAction;
+//form controller
+use App\Http\Controllers\form;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +57,6 @@ Route::controller(customcontroller::class)->group(function(){
 
     //single action controller routing define
     //    Route::get('/contact', singleAction::class)->name('contact');
+
+    Route::get('/register',[form::class, 'register']);
+    Route::post('/register',[form::class, 'register']);
