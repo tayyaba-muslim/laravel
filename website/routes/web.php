@@ -59,4 +59,4 @@ Route::controller(customcontroller::class)->group(function(){
     //    Route::get('/contact', singleAction::class)->name('contact');
 
     Route::get('/register',[form::class, 'register']);
-    Route::post('/register',[form::class, 'register']);
+    Route::post('/register',[form::class, 'register_data']);
