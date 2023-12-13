@@ -7,6 +7,8 @@ use App\Http\Controllers\customcontroller;
 use App\Http\Controllers\singleAction;
 //form controller
 use App\Http\Controllers\form;
+//user controller
+use App\Http\Controllers\user;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,3 +62,4 @@ Route::controller(customcontroller::class)->group(function(){
 
     Route::get('/register',[form::class, 'register']);
     Route::post('/register',[form::class, 'register_data']);
+    Route::get('/user-view',[form::class, 'user_view']);

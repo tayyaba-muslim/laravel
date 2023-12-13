@@ -23,7 +23,16 @@ class form extends Controller
         $data->email = $request['email'];
         $data->password = $request['pass'];
         $data-> save();
-        return redirect('/register');
+        return redirect('/user-view');
 
+    }
+    public function user_view(){
+        $records= formModel::all();
+        // echo '<pre>';
+        // print_r($records->toArray());
+        // echo '</pre>';
+
+        $userdata = compact('records');
+        return view('user-view')->with($userdata);
     }
 }
