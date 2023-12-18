@@ -35,4 +35,35 @@ class form extends Controller
         $userdata = compact('records');
         return view('user-view')->with($userdata);
     }
+
+    public function user_delete($id){
+        // $records= formModel::find($id)->delete();
+        // return redirect('user-view');
+
+        $records= formModel::find($id);
+        if(!is_null($records)){
+            $records->delete();
+            return redirect('user-view');
+        }else{
+             return redirect('user-view');
+        }
+
+    }
+    public function user_edit($id){
+        $records= formModel::find($id);
+        // return view('edit');
+        $data= compact('records');
+        return view('edit')->with($data);
+
+
+    }
+    public function user_update($id, Request $request){
+        $records= formModel::find($id);
+        $records->name = $request['name'];
+        $records->email = $request['email'];
+      
+        $records-> save();
+        return redirect('/user-view');
+
+    }
 }

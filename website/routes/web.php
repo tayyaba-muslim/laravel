@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 //basic controller(custom controller)
 use App\Http\Controllers\customcontroller;
 //single action controller
@@ -63,3 +64,9 @@ Route::controller(customcontroller::class)->group(function(){
     Route::get('/register',[form::class, 'register']);
     Route::post('/register',[form::class, 'register_data']);
     Route::get('/user-view',[form::class, 'user_view']);
+    Route::get('/user-delete/{id}',[form::class, 'user_delete'])->name('user-delete');
+    Route::get('/edit/{id}',[form::class, 'user_edit'])->name('user-edit');
+    Route::post('/update/{id}',[form::class, 'user_update'])->name('user-update');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

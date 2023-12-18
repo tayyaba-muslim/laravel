@@ -28,6 +28,8 @@
                     <th>User ID</th>
                     <th>User Name</th>
                     <th>User Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +40,8 @@
                     <td scope="row">{{$item->id}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->email}}</td>
+                    <td><a class="btn btn-success" href="{{route ('user-edit', $item->id )}}">Edit</a></td>
+                    <td><a class="btn btn-danger" href="{{route ('user-delete', $item->id )}}">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>
